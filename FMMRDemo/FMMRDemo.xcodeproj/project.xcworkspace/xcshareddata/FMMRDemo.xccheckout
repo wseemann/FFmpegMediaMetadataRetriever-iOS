@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3B9AC07E-1254-4E5A-A107-CB5FAB546A9A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FMMRDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BB0DD83D76A9FA1363E38BAFAC7BA05E579B7ED3</key>
+		<string>https://github.com/wseemann/FFmpegMediaMetadataRetriever-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FMMRDemo/FMMRDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BB0DD83D76A9FA1363E38BAFAC7BA05E579B7ED3</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wseemann/FFmpegMediaMetadataRetriever-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BB0DD83D76A9FA1363E38BAFAC7BA05E579B7ED3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BB0DD83D76A9FA1363E38BAFAC7BA05E579B7ED3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FFmpegMediaMetadataRetriever-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
