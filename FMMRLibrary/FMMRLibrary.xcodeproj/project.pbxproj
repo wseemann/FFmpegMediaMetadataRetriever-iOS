@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD18624A1A303D8F006F895F /* libFMMRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD18623E1A303D8F006F895F /* libFMMRLibrary.a */; };
+		AD4FF59C1A303E9300C31BB7 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FF5951A303E9300C31BB7 /* libavcodec.a */; };
+		AD4FF59D1A303E9300C31BB7 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FF5961A303E9300C31BB7 /* libavdevice.a */; };
+		AD4FF59E1A303E9300C31BB7 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FF5971A303E9300C31BB7 /* libavfilter.a */; };
+		AD4FF59F1A303E9300C31BB7 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FF5981A303E9300C31BB7 /* libavformat.a */; };
+		AD4FF5A01A303E9300C31BB7 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FF5991A303E9300C31BB7 /* libavutil.a */; };
+		AD4FF5A11A303E9300C31BB7 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FF59A1A303E9300C31BB7 /* libswresample.a */; };
+		AD4FF5A21A303E9300C31BB7 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4FF59B1A303E9300C31BB7 /* libswscale.a */; };
+		AD4FF5A91A303EF300C31BB7 /* ffmpeg_mediametadataretriever.c in Sources */ = {isa = PBXBuildFile; fileRef = AD4FF5A31A303EF300C31BB7 /* ffmpeg_mediametadataretriever.c */; };
+		AD4FF5AA1A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD4FF5A61A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.mm */; };
+		AD4FF5AB1A303EF300C31BB7 /* mediametadataretriever.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4FF5A71A303EF300C31BB7 /* mediametadataretriever.cpp */; };
+		AD4FF5AC1A303F0300C31BB7 /* FFmpegMediaMetadataRetriever.h in Copy Files */ = {isa = PBXBuildFile; fileRef = AD4FF5A51A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.h */; };
+		AD4FF5AD1A303F0C00C31BB7 /* mediametadataretriever.h in Copy Files */ = {isa = PBXBuildFile; fileRef = AD4FF5A81A303EF300C31BB7 /* mediametadataretriever.h */; };
+		AD96D8571A30B5FF00BAB585 /* ffmpeg_mediametadataretriever.h in Copy Files */ = {isa = PBXBuildFile; fileRef = AD4FF5A41A303EF300C31BB7 /* ffmpeg_mediametadataretriever.h */; };
+		ADBAB3C31A3978A8008B311B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBAB3C21A3978A8008B311B /* UIKit.framework */; };
+		ADEE1B551A39890A00FBEE5C /* ffmpeg_mediametadataretriever.h in Resources */ = {isa = PBXBuildFile; fileRef = AD4FF5A41A303EF300C31BB7 /* ffmpeg_mediametadataretriever.h */; };
+		ADEE1B561A39891B00FBEE5C /* mediametadataretriever.h in Resources */ = {isa = PBXBuildFile; fileRef = AD4FF5A81A303EF300C31BB7 /* mediametadataretriever.h */; };
+		ADEE1B571A39892900FBEE5C /* FFmpegMediaMetadataRetriever.h in Resources */ = {isa = PBXBuildFile; fileRef = AD4FF5A51A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD18624B1A303D8F006F895F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD1862361A303D8F006F895F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD18623D1A303D8F006F895F;
+			remoteInfo = FMMRLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD18623C1A303D8F006F895F /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AD96D8571A30B5FF00BAB585 /* ffmpeg_mediametadataretriever.h in Copy Files */,
+				AD4FF5AD1A303F0C00C31BB7 /* mediametadataretriever.h in Copy Files */,
+				AD4FF5AC1A303F0300C31BB7 /* FFmpegMediaMetadataRetriever.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AD18623E1A303D8F006F895F /* libFMMRLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMMRLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1862491A303D8F006F895F /* FMMRLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMMRLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD18624F1A303D8F006F895F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD4FF5951A303E9300C31BB7 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "FFmpeg-iOS/lib/libavcodec.a"; sourceTree = "<group>"; };
+		AD4FF5961A303E9300C31BB7 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = "FFmpeg-iOS/lib/libavdevice.a"; sourceTree = "<group>"; };
+		AD4FF5971A303E9300C31BB7 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = "FFmpeg-iOS/lib/libavfilter.a"; sourceTree = "<group>"; };
+		AD4FF5981A303E9300C31BB7 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = "FFmpeg-iOS/lib/libavformat.a"; sourceTree = "<group>"; };
+		AD4FF5991A303E9300C31BB7 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = "FFmpeg-iOS/lib/libavutil.a"; sourceTree = "<group>"; };
+		AD4FF59A1A303E9300C31BB7 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = "FFmpeg-iOS/lib/libswresample.a"; sourceTree = "<group>"; };
+		AD4FF59B1A303E9300C31BB7 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = "FFmpeg-iOS/lib/libswscale.a"; sourceTree = "<group>"; };
+		AD4FF5A31A303EF300C31BB7 /* ffmpeg_mediametadataretriever.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffmpeg_mediametadataretriever.c; sourceTree = "<group>"; };
+		AD4FF5A41A303EF300C31BB7 /* ffmpeg_mediametadataretriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffmpeg_mediametadataretriever.h; sourceTree = "<group>"; };
+		AD4FF5A51A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFmpegMediaMetadataRetriever.h; sourceTree = "<group>"; };
+		AD4FF5A61A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FFmpegMediaMetadataRetriever.mm; sourceTree = "<group>"; };
+		AD4FF5A71A303EF300C31BB7 /* mediametadataretriever.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mediametadataretriever.cpp; sourceTree = "<group>"; };
+		AD4FF5A81A303EF300C31BB7 /* mediametadataretriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediametadataretriever.h; sourceTree = "<group>"; };
+		ADBAB3C21A3978A8008B311B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD18623B1A303D8F006F895F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD4FF59C1A303E9300C31BB7 /* libavcodec.a in Frameworks */,
+				AD4FF59D1A303E9300C31BB7 /* libavdevice.a in Frameworks */,
+				AD4FF59E1A303E9300C31BB7 /* libavfilter.a in Frameworks */,
+				AD4FF59F1A303E9300C31BB7 /* libavformat.a in Frameworks */,
+				AD4FF5A01A303E9300C31BB7 /* libavutil.a in Frameworks */,
+				AD4FF5A11A303E9300C31BB7 /* libswresample.a in Frameworks */,
+				AD4FF5A21A303E9300C31BB7 /* libswscale.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD1862461A303D8F006F895F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBAB3C31A3978A8008B311B /* UIKit.framework in Frameworks */,
+				AD18624A1A303D8F006F895F /* libFMMRLibrary.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD1862351A303D8F006F895F = {
+			isa = PBXGroup;
+			children = (
+				ADBAB3C21A3978A8008B311B /* UIKit.framework */,
+				AD4FF5951A303E9300C31BB7 /* libavcodec.a */,
+				AD4FF5961A303E9300C31BB7 /* libavdevice.a */,
+				AD4FF5971A303E9300C31BB7 /* libavfilter.a */,
+				AD4FF5981A303E9300C31BB7 /* libavformat.a */,
+				AD4FF5991A303E9300C31BB7 /* libavutil.a */,
+				AD4FF59A1A303E9300C31BB7 /* libswresample.a */,
+				AD4FF59B1A303E9300C31BB7 /* libswscale.a */,
+				AD1862401A303D8F006F895F /* FMMRLibrary */,
+				AD18624D1A303D8F006F895F /* FMMRLibraryTests */,
+				AD18623F1A303D8F006F895F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD18623F1A303D8F006F895F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD18623E1A303D8F006F895F /* libFMMRLibrary.a */,
+				AD1862491A303D8F006F895F /* FMMRLibraryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD1862401A303D8F006F895F /* FMMRLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				AD4FF5A31A303EF300C31BB7 /* ffmpeg_mediametadataretriever.c */,
+				AD4FF5A41A303EF300C31BB7 /* ffmpeg_mediametadataretriever.h */,
+				AD4FF5A51A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.h */,
+				AD4FF5A61A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.mm */,
+				AD4FF5A71A303EF300C31BB7 /* mediametadataretriever.cpp */,
+				AD4FF5A81A303EF300C31BB7 /* mediametadataretriever.h */,
+			);
+			path = FMMRLibrary;
+			sourceTree = "<group>";
+		};
+		AD18624D1A303D8F006F895F /* FMMRLibraryTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD18624E1A303D8F006F895F /* Supporting Files */,
+			);
+			path = FMMRLibraryTests;
+			sourceTree = "<group>";
+		};
+		AD18624E1A303D8F006F895F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD18624F1A303D8F006F895F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD18623D1A303D8F006F895F /* FMMRLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD1862521A303D8F006F895F /* Build configuration list for PBXNativeTarget "FMMRLibrary" */;
+			buildPhases = (
+				AD18623A1A303D8F006F895F /* Sources */,
+				AD18623B1A303D8F006F895F /* Frameworks */,
+				AD18623C1A303D8F006F895F /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMMRLibrary;
+			productName = FMMRLibrary;
+			productReference = AD18623E1A303D8F006F895F /* libFMMRLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AD1862481A303D8F006F895F /* FMMRLibraryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD1862551A303D8F006F895F /* Build configuration list for PBXNativeTarget "FMMRLibraryTests" */;
+			buildPhases = (
+				AD1862451A303D8F006F895F /* Sources */,
+				AD1862461A303D8F006F895F /* Frameworks */,
+				AD1862471A303D8F006F895F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD18624C1A303D8F006F895F /* PBXTargetDependency */,
+			);
+			name = FMMRLibraryTests;
+			productName = FMMRLibraryTests;
+			productReference = AD1862491A303D8F006F895F /* FMMRLibraryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD1862361A303D8F006F895F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "William Seemann";
+				TargetAttributes = {
+					AD18623D1A303D8F006F895F = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					AD1862481A303D8F006F895F = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = AD1862391A303D8F006F895F /* Build configuration list for PBXProject "FMMRLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AD1862351A303D8F006F895F;
+			productRefGroup = AD18623F1A303D8F006F895F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD18623D1A303D8F006F895F /* FMMRLibrary */,
+				AD1862481A303D8F006F895F /* FMMRLibraryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD1862471A303D8F006F895F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADEE1B571A39892900FBEE5C /* FFmpegMediaMetadataRetriever.h in Resources */,
+				ADEE1B561A39891B00FBEE5C /* mediametadataretriever.h in Resources */,
+				ADEE1B551A39890A00FBEE5C /* ffmpeg_mediametadataretriever.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD18623A1A303D8F006F895F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD4FF5A91A303EF300C31BB7 /* ffmpeg_mediametadataretriever.c in Sources */,
+				AD4FF5AA1A303EF300C31BB7 /* FFmpegMediaMetadataRetriever.mm in Sources */,
+				AD4FF5AB1A303EF300C31BB7 /* mediametadataretriever.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD1862451A303D8F006F895F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD18624C1A303D8F006F895F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD18623D1A303D8F006F895F /* FMMRLibrary */;
+			targetProxy = AD18624B1A303D8F006F895F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AD1862501A303D8F006F895F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AD1862511A303D8F006F895F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD1862531A303D8F006F895F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "FFmpeg-iOS/include/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AD1862541A303D8F006F895F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "FFmpeg-iOS/include/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AD1862561A303D8F006F895F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FMMRLibraryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD1862571A303D8F006F895F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FMMRLibraryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD1862391A303D8F006F895F /* Build configuration list for PBXProject "FMMRLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD1862501A303D8F006F895F /* Debug */,
+				AD1862511A303D8F006F895F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD1862521A303D8F006F895F /* Build configuration list for PBXNativeTarget "FMMRLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD1862531A303D8F006F895F /* Debug */,
+				AD1862541A303D8F006F895F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD1862551A303D8F006F895F /* Build configuration list for PBXNativeTarget "FMMRLibraryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD1862561A303D8F006F895F /* Debug */,
+				AD1862571A303D8F006F895F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD1862361A303D8F006F895F /* Project object */;
+}
