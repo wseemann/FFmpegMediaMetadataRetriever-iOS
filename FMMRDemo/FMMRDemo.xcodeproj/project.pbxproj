@@ -18,6 +18,8 @@
 		AD96D85D1A30B73F00BAB585 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD96D85C1A30B73F00BAB585 /* libz.1.dylib */; };
 		AD96D8621A30B95F00BAB585 /* libFMMRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD96D8611A30B95F00BAB585 /* libFMMRLibrary.a */; };
 		AD96D8641A30B9F200BAB585 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD96D8631A30B9F200BAB585 /* libbz2.1.0.dylib */; };
+		ADEE3C0B1DDD50B9004DDCA6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEE3C0A1DDD50B9004DDCA6 /* CoreMedia.framework */; };
+		ADEE3C0D1DDD50C6004DDCA6 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEE3C0C1DDD50C6004DDCA6 /* VideoToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		AD96D85C1A30B73F00BAB585 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = usr/lib/libz.1.dylib; sourceTree = SDKROOT; };
 		AD96D8611A30B95F00BAB585 /* libFMMRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFMMRLibrary.a; sourceTree = "<group>"; };
 		AD96D8631A30B9F200BAB585 /* libbz2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.dylib; path = usr/lib/libbz2.1.0.dylib; sourceTree = SDKROOT; };
+		ADEE3C0A1DDD50B9004DDCA6 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		ADEE3C0C1DDD50C6004DDCA6 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADEE3C0D1DDD50C6004DDCA6 /* VideoToolbox.framework in Frameworks */,
+				ADEE3C0B1DDD50B9004DDCA6 /* CoreMedia.framework in Frameworks */,
 				AD96D8641A30B9F200BAB585 /* libbz2.1.0.dylib in Frameworks */,
 				AD96D8621A30B95F00BAB585 /* libFMMRLibrary.a in Frameworks */,
 				AD96D85D1A30B73F00BAB585 /* libz.1.dylib in Frameworks */,
@@ -75,6 +81,8 @@
 		AD5266511A3042F7005FC268 = {
 			isa = PBXGroup;
 			children = (
+				ADEE3C0C1DDD50C6004DDCA6 /* VideoToolbox.framework */,
+				ADEE3C0A1DDD50B9004DDCA6 /* CoreMedia.framework */,
 				AD96D8631A30B9F200BAB585 /* libbz2.1.0.dylib */,
 				AD96D8611A30B95F00BAB585 /* libFMMRLibrary.a */,
 				AD96D85C1A30B73F00BAB585 /* libz.1.dylib */,
@@ -137,6 +145,16 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		ADEE3BFE1DDD4ACA004DDCA6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		AD5266591A3042F7005FC268 /* FMMRDemo */ = {
 			isa = PBXNativeTarget;
@@ -145,6 +163,7 @@
 				AD5266561A3042F7005FC268 /* Sources */,
 				AD5266571A3042F7005FC268 /* Frameworks */,
 				AD5266581A3042F7005FC268 /* Resources */,
+				ADEE3BFE1DDD4ACA004DDCA6 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -179,7 +198,7 @@
 		AD5266521A3042F7005FC268 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "William Seemann";
 				TargetAttributes = {
 					AD5266591A3042F7005FC268 = {
@@ -299,6 +318,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -369,6 +389,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wseemann.media.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -385,6 +406,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wseemann.media.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -403,6 +425,7 @@
 				);
 				INFOPLIST_FILE = FMMRDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wseemann.media.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FMMRDemo.app/FMMRDemo";
 			};
@@ -418,6 +441,7 @@
 				);
 				INFOPLIST_FILE = FMMRDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wseemann.media.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FMMRDemo.app/FMMRDemo";
 			};

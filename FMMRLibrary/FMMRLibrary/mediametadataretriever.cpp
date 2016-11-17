@@ -1,17 +1,9 @@
-//
-//  mediametadataretriever.cpp
-//  FFmpegMediaMetadataRetriever
-//
-//  Created by William Seemann on 12/4/14.
-//  Copyright (c) 2014 William Seemann. All rights reserved.
-//
-
 /*
  * FFmpegMediaMetadataRetriever-iOS: Port of FFmpegMediaMetadataRetriever for
  * iOS. A unified interface for retrieving frame and meta data from an
  * input media file.
  *
- * Copyright 2014 William Seemann
+ * Copyright 2016 William Seemann
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,8 +24,6 @@
 #include "mediametadataretriever.h"
 
 extern "C" {
-	#include "libavcodec/avcodec.h"
-	#include "libavformat/avformat.h"
 	#include "ffmpeg_mediametadataretriever.h"
 }
 
@@ -66,6 +56,11 @@ int MediaMetadataRetriever::getFrameAtTime(int64_t timeUs, int option, AVPacket 
     return ::get_frame_at_time(&state, timeUs, option, pkt);
 }
 
+int MediaMetadataRetriever::getScaledFrameAtTime(int64_t timeUs, int option, AVPacket *pkt, int width, int height)
+{
+    return ::get_scaled_frame_at_time(&state, timeUs, option, pkt, width, height);
+}
+
 const char* MediaMetadataRetriever::extractMetadata(const char *key)
 {
     return ::extract_metadata(&state, key);
@@ -79,4 +74,9 @@ const char* MediaMetadataRetriever::extractMetadataFromChapter(const char *key, 
 int MediaMetadataRetriever::extractAlbumArt(AVPacket *pkt)
 {
     return ::get_embedded_picture(&state, pkt);
+}
+
+int MediaMetadataRetriever::getMetadata(bool update_only, bool apply_filter, AVDictionary **metadata)
+{
+    return get_metadata(&state, metadata);
 }

@@ -1,9 +1,10 @@
 /*
- * FFmpegMediaMetadataRetriever: A unified interface for retrieving frame 
- * and meta data from an input media file.
+ * FFmpegMediaMetadataRetriever-iOS: Port of FFmpegMediaMetadataRetriever for
+ * iOS. A unified interface for retrieving frame and meta data from an
+ * input media file.
  *
- * Copyright 2014 William Seemann
- * 
+ * Copyright 2016 William Seemann
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -21,8 +22,6 @@
 #define MEDIAMETADATARETRIEVER_H
 
 extern "C" {
-	#include "libavcodec/avcodec.h"
-	#include "libavformat/avformat.h"
     #include "ffmpeg_mediametadataretriever.h"
 }
 
@@ -36,9 +35,11 @@ public:
     int setDataSource(const char* dataSourceUrl, const char* headers);
     int setDataSource(int fd, int64_t offset, int64_t length);
     int getFrameAtTime(int64_t timeUs, int option, AVPacket *pkt);
+    int getScaledFrameAtTime(int64_t timeUs, int option, AVPacket *pkt, int width, int height);
     int extractAlbumArt(AVPacket *pkt);
     const char* extractMetadata(const char* key);
     const char* extractMetadataFromChapter(const char* key, int chapter);
+    int getMetadata(bool update_only, bool apply_filter, AVDictionary **metadata);
 };
 
 #endif // MEDIAMETADATARETRIEVER_H

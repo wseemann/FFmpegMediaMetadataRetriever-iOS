@@ -59,6 +59,8 @@ static const NSString * METADATA_KEY_ICY_METADATA = @"icy_metadata";
 static const NSString * METADATA_KEY_FRAMERATE = @"framerate";
 static const NSString * METADATA_KEY_CHAPTER_START_TIME = @"chapter_start_time";
 static const NSString * METADATA_KEY_CHAPTER_END_TIME = @"chapter_end_time";
+static const NSString * METADATA_CHAPTER_COUNT = @"chapter_count";
+static const NSString * METADATA_KEY_FILESIZE = @"filesize";
 
 @interface FFmpegMediaMetadataRetriever : NSObject
 
@@ -71,6 +73,7 @@ static const NSString * METADATA_KEY_CHAPTER_END_TIME = @"chapter_end_time";
 - (UIImage *)getFrameAtTimeWithOptions:(int64_t)timeUs option:(NSInteger)option;
 - (UIImage *)getFrameAtTime:(int64_t)timeUs;
 - (UIImage *)getFrame;
+- (UIImage *)getScaledFrameAtTime:(int64_t)timeUs width:(NSInteger)width height:(NSInteger)height;
 - (UIImage *)getEmbeddedPicture;
 + (void)release;
 

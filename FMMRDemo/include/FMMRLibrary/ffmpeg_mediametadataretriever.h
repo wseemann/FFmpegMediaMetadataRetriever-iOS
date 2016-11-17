@@ -1,9 +1,10 @@
 /*
- * FFmpegMediaMetadataRetriever: A unified interface for retrieving frame 
- * and meta data from an input media file.
+ * FFmpegMediaMetadataRetriever-iOS: Port of FFmpegMediaMetadataRetriever for
+ * iOS. A unified interface for retrieving frame and meta data from an
+ * input media file.
  *
- * Copyright 2014 William Seemann
- * 
+ * Copyright 2016 William Seemann
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -22,6 +23,7 @@
 
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
+#include <libavutil/dict.h>
 
 // Keep these in synch with the constants defined in FFmpegMediaMetadataRetriever.java
 // class.
@@ -43,14 +45,26 @@ typedef struct State {
 	int             fd;
 	int64_t         offset;
 	const char      *headers;
+	struct SwsContext *sws_ctx;
+	AVCodecContext  *codecCtx;
+
+	struct SwsContext *scaled_sws_ctx;
+	AVCodecContext  *scaled_codecCtx;
 } State;
+
+struct AVDictionary {
+	int count;
+	AVDictionaryEntry *elems;
+};
 
 int set_data_source_uri(State **ps, const char* path, const char* headers);
 int set_data_source_fd(State **ps, int fd, int64_t offset, int64_t length);
 const char* extract_metadata(State **ps, const char* key);
 const char* extract_metadata_from_chapter(State **ps, const char* key, int chapter);
+int get_metadata(State **ps, AVDictionary **metadata);
 int get_embedded_picture(State **ps, AVPacket *pkt);
 int get_frame_at_time(State **ps, int64_t timeUs, int option, AVPacket *pkt);
+int get_scaled_frame_at_time(State **ps, int64_t timeUs, int option, AVPacket *pkt, int width, int height);
 void release(State **ps);
 
 #endif /*FFMPEG_MEDIAMETADATARETRIEVER_H_*/

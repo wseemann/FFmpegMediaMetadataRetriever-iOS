@@ -11,7 +11,7 @@
  * iOS. A unified interface for retrieving frame and meta data from an
  * input media file.
  *
- * Copyright 2014 William Seemann
+ * Copyright 2016 William Seemann
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -83,7 +83,7 @@ MediaMetadataRetriever *mmr = NULL;
         [data appendBytes:(const void *) pkt.data length: pkt.size];
         image = [UIImage imageWithData: data];
     }
-    av_free_packet(&pkt);
+    av_packet_unref(&pkt);
     
     return image;
 }
@@ -98,6 +98,22 @@ MediaMetadataRetriever *mmr = NULL;
     return [self getFrameAtTimeWithOptions: -1 option: OPTION_CLOSEST_SYNC];
 }
 
+- (UIImage *)getScaledFrameAtTime:(int64_t)timeUs width:(NSInteger)width height:(NSInteger)height
+{
+    AVPacket pkt;
+    UIImage *image = NULL;
+    
+    av_init_packet(&pkt);
+    if (mmr->getScaledFrameAtTime(timeUs, OPTION_CLOSEST_SYNC, &pkt, (int) width, (int) height) == 0) {
+        NSMutableData *data = [NSMutableData new];
+        [data appendBytes:(const void *) pkt.data length: pkt.size];
+        image = [UIImage imageWithData: data];
+    }
+    av_packet_unref(&pkt);
+    
+    return image;
+}
+
 - (UIImage *)getEmbeddedPicture
 {
     AVPacket pkt;
@@ -109,7 +125,7 @@ MediaMetadataRetriever *mmr = NULL;
         [data appendBytes:(const void *) pkt.data length: pkt.size];
         image = [UIImage imageWithData: data];
     }
-    av_free_packet(&pkt);
+    av_packet_unref(&pkt);
     
     return image;
 }

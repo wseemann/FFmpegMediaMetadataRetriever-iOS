@@ -6,6 +6,26 @@
 //  Copyright (c) 2014 William Seemann. All rights reserved.
 //
 
+/*
+ * FFmpegMediaMetadataRetriever-iOS: Port of FFmpegMediaMetadataRetriever for
+ * iOS. A unified interface for retrieving frame and meta data from an
+ * input media file.
+ *
+ * Copyright 2014 William Seemann
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -39,6 +59,8 @@ static const NSString * METADATA_KEY_ICY_METADATA = @"icy_metadata";
 static const NSString * METADATA_KEY_FRAMERATE = @"framerate";
 static const NSString * METADATA_KEY_CHAPTER_START_TIME = @"chapter_start_time";
 static const NSString * METADATA_KEY_CHAPTER_END_TIME = @"chapter_end_time";
+static const NSString * METADATA_CHAPTER_COUNT = @"chapter_count";
+static const NSString * METADATA_KEY_FILESIZE = @"filesize";
 
 @interface FFmpegMediaMetadataRetriever : NSObject
 
@@ -51,6 +73,7 @@ static const NSString * METADATA_KEY_CHAPTER_END_TIME = @"chapter_end_time";
 - (UIImage *)getFrameAtTimeWithOptions:(int64_t)timeUs option:(NSInteger)option;
 - (UIImage *)getFrameAtTime:(int64_t)timeUs;
 - (UIImage *)getFrame;
+- (UIImage *)getScaledFrameAtTime:(int64_t)timeUs width:(NSInteger)width height:(NSInteger)height;
 - (UIImage *)getEmbeddedPicture;
 + (void)release;
 
